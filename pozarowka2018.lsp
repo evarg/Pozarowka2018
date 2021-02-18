@@ -6,7 +6,7 @@
 
 
 ; sciezki dostepu
-(setq PATH_SKRYPT "z:\\skrypty\\AutoLisp\\pozarowka2018\\")
+(setq PATH_SKRYPT "d:\\repozytorium\\AutoLisp\\pozarowka2018\\")
 (setq PATH_BLOKI (strcat PATH_SKRYPT "Bloki\\"))
 (setq PATH_SYSTEMY (strcat PATH_SKRYPT "Systemy\\"))
 
@@ -23,10 +23,14 @@
 		"POLON4200" 
 		"POLON4900" 
 		"FP2000" 
-	))
+		"ESSER"
+		"AWEX"
+		))
 
 ; wczytanie dodatkowych funkcji
 (load (strcat PATH_SKRYPT "helper.lsp"))
+
+
 	
 ; wczytanie pliku z systemem i nadpisaniem wszystkich zmiennych	
 (defun ssp:WczytajSystemy ()
@@ -68,7 +72,7 @@
 	(if (= AKTYWNY_SYSTEM "POLON4200") 		(polon4200:BlokiWczytajZDysku))
 	(if (= AKTYWNY_SYSTEM "POLON4900") 		(polon4900:BlokiWczytajZDysku))
 	(if (= AKTYWNY_SYSTEM "FP2000") 		(fp2000:BlokiWczytajZDysku))
-	(if (= AKTYWNY_SYSTEM "BRAK") 			((print "BRAK :BlokiWczytajZDysku))
+	(if (= AKTYWNY_SYSTEM "BRAK") 			(print "BRAK :BlokiWczytajZDysku"))
 )
 
 

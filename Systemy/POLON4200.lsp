@@ -2,7 +2,7 @@
 
 (ssp:Log (strcat " - Strat wczytywanie systemu: " SYSTEM_NAME))
 
-(setq POLON4200_PATH_BLOKI (strcat PATH_SKRYPT "Systemy\\POLON4000\\"))
+(setq POLON4200_PATH_BLOKI (strcat PATH_SKRYPT "Systemy\\POLON4200\\"))
 
 
 (setq POLON4200_LISTA_BLOKOW '(

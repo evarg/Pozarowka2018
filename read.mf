@@ -1,0 +1,5 @@
+tag PLAN - numer z planu
+tag CENTRALA - numer jaki wyswietli centrala przy zadymieniu
+tag RAW:
+   nr_centrali,nr_na_petli,serial
+   

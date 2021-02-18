@@ -27,6 +27,16 @@
 (defun ssp:DCL_UstawieniaWidocznosciAtrybutow()
 	(setq dcl_id (load_dialog (strcat PATH_SKRYPT "wUstawieniaWidocznosciAtrybutow.dcl")))
 	(new_dialog "wUstawieniaWidocznosciAtrybutow" dcl_id)
+
+	(action_tile "kRAWOn" "(ssp:ParametrListaOn BOSCHFPA5000_LISTA_BLOKOW \"raw\" )") 
+	(action_tile "kRAWOff" "(ssp:ParametrListaOff BOSCHFPA5000_LISTA_BLOKOW \"raw\" )") 
+	
+	(action_tile "kCENTRALAOn" "(ssp:ParametrListaOn BOSCHFPA5000_LISTA_BLOKOW \"centrala\" )") 
+	(action_tile "kCENTRALAOff" "(ssp:ParametrListaOff BOSCHFPA5000_LISTA_BLOKOW \"centrala\" )") 
+
+	(action_tile "kPLANOn" "(ssp:ParametrListaOn BOSCHFPA5000_LISTA_BLOKOW \"plan\" )") 
+	(action_tile "kPLANOff" "(ssp:ParametrListaOff BOSCHFPA5000_LISTA_BLOKOW \"plan\" )") 
+	
 	(start_dialog)
 
 	(unload_dialog dcl_id)
@@ -132,7 +142,7 @@
 
 		(action_tile "ZiZ" 
 			"
-				(setq nii_raw (get_tile \"i_raw\"))
+ 				(setq nii_raw (get_tile \"i_raw\"))
 				(ssp:AtrybutUstawDXF (car blok) \"raw\" nii_raw)
 
 				(setq nii_centrala (get_tile \"i_centrala\"))

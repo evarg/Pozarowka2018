@@ -18,6 +18,7 @@
 	"BOSCH_RLV1"
 	"BOSCH_RLV8"
 	"BOSCH_WZ"
+	"BOSCH_AF"
 ))
 
 (defun boschfpa5000:BlokiLista ()
